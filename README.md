@@ -6,33 +6,34 @@
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-purple?style=for-the-badge&logo=pandas)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
-An interactive **Color Detection** application built with **Python**, **OpenCV**, **NumPy**, and **Pandas**. The project allows users to identify colors by double-clicking on an image while also experimenting with HSV thresholding using interactive trackbars.
+An interactive **Color Detection** application built with **Python**, **OpenCV**, **NumPy**, and **Pandas**. This project identifies the nearest color by double-clicking on an image and allows users to experiment with HSV thresholding using interactive trackbars.
 
 ---
 
 ## ✨ Features
 
-- 🎯 Detects the nearest color name from a color database.
+- 🎯 Detect the nearest color name from a color database.
 - 🖱️ Double-click anywhere on the image to identify a color.
-- 🌈 Displays:
+- 🌈 Display:
   - Color Name
   - RGB Values
   - HSV Values
 - 🎚️ Interactive HSV Trackbars
 - 🎭 Live HSV Mask Preview
 - 🖼️ Live Color Detection Result
-- 📂 Supports multiple images using command-line arguments.
+- 📂 Supports multiple images through command-line arguments.
 - ⚠️ Error handling for missing image and CSV files.
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 Color-Detection-Using-OpenCV/
 │
-├── color_detect.py
+├── color_detection.py
 ├── colors.csv
+├── colorpic.jpg
 ├── pic1.jpg
 ├── pic2.jpg
 ├── pic3.jpg
@@ -59,19 +60,19 @@ Color-Detection-Using-OpenCV/
 
 ## 📦 Installation
 
-Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/YashKumar546/Color-Detection-Using-OpenCV.git
 ```
 
-Move into the project folder
+Move into the project directory:
 
 ```bash
 cd Color-Detection-Using-OpenCV
 ```
 
-Install dependencies
+Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -84,34 +85,34 @@ pip install -r requirements.txt
 Run with the default image:
 
 ```bash
-python color_detect.py
+python color_detection.py
 ```
 
 Run with a specific image:
 
 ```bash
-python color_detect.py pic2.jpg
+python color_detection.py pic2.jpg
 ```
 
-or
+Run with your own image:
 
 ```bash
-python color_detect.py myimage.jpg
+python color_detection.py myimage.jpg
 ```
 
 Use a custom color database:
 
 ```bash
-python color_detect.py pic2.jpg --csv colors.csv
+python color_detection.py pic2.jpg --csv colors.csv
 ```
 
 ---
 
 ## 🎮 Controls
 
-| Key / Action | Function |
-|--------------|----------|
-| 🖱️ Double Left Click | Detect Color |
+| Action | Function |
+|--------|----------|
+| 🖱️ Double Left Click | Detect color |
 | **R** | Reset detected color |
 | **ESC** | Exit application |
 
@@ -119,11 +120,11 @@ python color_detect.py pic2.jpg --csv colors.csv
 
 ## 🧠 How It Works
 
-1. Loads an image.
-2. Converts the image from **BGR** to **HSV**.
-3. Uses HSV trackbars to create a color mask.
-4. Double-clicking a pixel retrieves its RGB values.
-5. Finds the nearest matching color from `colors.csv`.
+1. Loads the selected image.
+2. Converts the image from **BGR** to **HSV** color space.
+3. Uses HSV trackbars to generate a color mask.
+4. Detects the RGB value of the pixel on double-click.
+5. Searches the nearest matching color from `colors.csv`.
 6. Displays:
    - Color Name
    - RGB Values
@@ -139,43 +140,44 @@ python color_detect.py pic2.jpg --csv colors.csv
 
 ### Original Image
 
-> Add screenshot here
+![Original Image](screenshots/demo1.png)
 
 ### HSV Mask
 
-> Add screenshot here
+![HSV Mask](screenshots/demo2.png)
 
 ### Detected Color
 
-> Add screenshot here
+![Detected Color](screenshots/demo3.png)
 
 ---
 
 ## 📈 Future Improvements
 
+- Real-time webcam color detection.
 - Detect multiple colors simultaneously.
 - Draw contours around detected objects.
-- Real-time webcam color detection.
 - Save detected color information.
 - Export HSV values.
-- GUI using Tkinter or PyQt.
+- Build a graphical interface using Tkinter or PyQt.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome.
+Contributions are welcome!
 
 1. Fork the repository.
-2. Create a new branch.
+2. Create a new feature branch.
 3. Commit your changes.
-4. Open a Pull Request.
+4. Push the branch.
+5. Open a Pull Request.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
 ---
 
@@ -183,6 +185,8 @@ This project is licensed under the MIT License.
 
 **Yash Kumar**
 
-GitHub: https://github.com/YashKumar546
+- GitHub: https://github.com/YashKumar546
 
-If you found this project helpful, consider giving it a ⭐ on GitHub!
+---
+
+⭐ **If you found this project useful, consider giving it a star on GitHub!**
